@@ -129,13 +129,13 @@ WebGLRenderingContext::WebGLRenderingContext(
   const char *extensionString = (const char*)((glGetString)(GL_EXTENSIONS));
 
   //Load required extensions
-  for(const char** rext = REQUIRED_EXTENSIONS; *rext; ++rext) {
-    if(!strstr(extensionString, *rext)) {
-      dispose();
-      state = GLCONTEXT_STATE_ERROR;
-      return;
-    }
-  }
+  // for(const char** rext = REQUIRED_EXTENSIONS; *rext; ++rext) {
+  //   if(!strstr(extensionString, *rext)) {
+  //     dispose();
+  //     state = GLCONTEXT_STATE_ERROR;
+  //     return;
+  //   }
+  // }
 
   //Select best preferred depth
   preferredDepth = GL_DEPTH_COMPONENT16;
